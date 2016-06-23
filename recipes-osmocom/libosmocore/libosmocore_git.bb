@@ -1,10 +1,12 @@
 require ${PN}.inc
 
 S = "${WORKDIR}/git"
-SRCREV = "70fcbda6dd733a503e9a046e01986d8bfc2e2bb2"
+SRCREV = "${AUTOREV}"
 SRC_URI = "git://git.osmocom.org/libosmocore.git;protocol=git;nobranch=1"
 PV = "0.9.0+gitr${SRCPV}"
 PR = "r1"
+
+DEPENDS += "libtalloc"
 
 PACKAGES =+ "libosmoctrl libosmocodec libosmogb libosmogsm libosmovty osmo-arfcn osmo-auc-gen"
 FILES_libosmoctrl = "${libdir}/libosmoctrl${SOLIBS}"
