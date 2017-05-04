@@ -2,7 +2,7 @@ DESCRITOPN = "OpenGGSN a Free Software GGSN"
 LICENSE = "GPLv2+"
 LIC_FILES_CHKSUM = "file://COPYING;md5=8ca43cbc842c2336e835926c2166c28b"
 PV = "0.91+gitr${SRCPV}"
-PR = "r14"
+PR = "r15"
 
 SRCREV = "b07d07072e70ac4f920be9dfdf45615193b4ec2d"
 SRC_URI = "git://git.osmocom.org/openggsn                   \
@@ -33,7 +33,7 @@ INITSCRIPT_PARAMS_openggsn = "defaults 29 29"
 RDEPENDS_${PN} += "iptables kernel-module-ipt-masquerade"
 
 FILES_libgtp = "${libdir}/*${SOLIBS}"
-FILES_libgtp-dev = "${includedir} ${libdir}/lib*${SOLIBSDEV} ${libdir}/*.la"
+FILES_libgtp-dev = "${includedir} ${libdir}/lib*${SOLIBSDEV} ${libdir}/*.la ${libdir}/pkgconfig"
 FILES_libgtp-staticdev = "${libdir}/*.a"
 
 FILES_openggsn-sgsnemu = "${bindir}/sgsnemu"
